@@ -1,15 +1,3 @@
-/**
- * Design tokens: the raw, primitive values the whole app is built from.
- *
- * These mirror the core brand colour tokens one-to-one. Tokens are intentionally
- * "dumb" - they describe a colour, not where it is used. Semantic roles live in
- * themes.ts. Keeping the raw palette separate from its roles lets us retheme the
- * app by remapping semantics without hunting for hard-coded values.
- *
- * Alpha tokens are expressed as rgba() strings because React Native does not
- * accept a separate opacity channel on a hex colour.
- */
-
 export const palette = {
   // Brand
   brandYellow: '#FFC917',
@@ -161,8 +149,6 @@ export const palette = {
   alphaBlack500: 'rgba(0,1,13,0.58)',
 } as const;
 
-// Spacing scale (in points). A single 4-based scale keeps rhythm consistent;
-// always reach for a scale step instead of an arbitrary number.
 export const spacing = {
   none: 0,
   xs: 4,
@@ -183,7 +169,6 @@ export const radii = {
   pill: 999,
 } as const;
 
-// Type scale. Sizes pair with sensible line heights for legible blocks of text.
 export const fontSizes = {
   caption: 12,
   label: 13,
@@ -204,8 +189,6 @@ export const lineHeights = {
   display: 40,
 } as const;
 
-// We rely on the platform system font for now (San Francisco on iOS). Custom
-// font loading is introduced later, where Expo and bare RN diverge noticeably.
 export const fontWeights = {
   regular: '400',
   medium: '500',
